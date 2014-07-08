@@ -144,6 +144,7 @@ buffer-local wherever it is set."
     coffee-coffeelint
     css-csslint
     d-dmd
+    d-dscanner
     elixir
     emacs-lisp
     emacs-lisp-checkdoc
@@ -4256,6 +4257,14 @@ See URL `http://dlang.org/'."
   ((error line-start (file-name) "(" line "): Error: " (message) line-end)
    (warning line-start (file-name) "(" line "): "
             (or "Warning" "Deprecation") ": " (message) line-end))
+  :modes d-mode)
+
+(flycheck-define-checker d-dscanner
+  "A D syntax checker using the Dscanner checker."
+  :command ("dscanner" "-s"
+            source)
+  :error-patterns
+  ((error line-start (file-name) "(" line ":" column ")[error]: " (message) line-end))
   :modes d-mode)
 
 (flycheck-define-checker elixir

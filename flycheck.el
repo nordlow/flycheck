@@ -144,6 +144,7 @@ buffer-local wherever it is set."
     coffee-coffeelint
     css-csslint
     d-dmd
+    d-dscanner-style
     d-dscanner-syntax
     elixir
     emacs-lisp

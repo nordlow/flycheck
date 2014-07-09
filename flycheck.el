@@ -4259,8 +4259,7 @@ See URL `http://dlang.org/'."
    (warning line-start (file-name) "(" line "): "
             (or "Warning" "Deprecation") ": " (message) line-end))
   :modes d-mode
-  :next-checkers ((no-errors . d-dscanner-syntax)
-                  (no-errors . d-dscanner-style)))
+  :next-checkers ((no-errors . d-dscanner-syntax)))
 
 (flycheck-define-checker d-dscanner-syntax
   "A D syntax checker using Dscanner.
@@ -4272,7 +4271,8 @@ See URL `https://github.com/Hackerpilot/Dscanner/'."
   :error-patterns
   ((error line-start (file-name) "(" line ":" column ")[error]: " (message) line-end)
    (warning line-start (file-name) "(" line ":" column ")[warn]: " (message) line-end))
-  :modes d-mode)
+  :modes d-mode
+  :next-checkers ((no-errors . d-dscanner-style)))
 
 (flycheck-define-checker d-dscanner-style
   "A D style checker using Dscanner.

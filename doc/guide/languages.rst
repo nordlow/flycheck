@@ -35,6 +35,9 @@ C/C++
 
    .. rubric:: Options
 
+   .. option:: flycheck-clang-blocks
+      :auto:
+
    .. option:: flycheck-clang-definitions
       :auto:
 
@@ -450,6 +453,9 @@ Rust
    .. rubric:: Options
 
    .. option:: flycheck-rust-check-tests
+      :auto:
+
+   .. option:: flycheck-rust-crate-root
       :auto:
 
    .. option:: flycheck-rust-library-path

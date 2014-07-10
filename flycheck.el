@@ -4768,7 +4768,7 @@ Requires DMD 2.066 or newer.  See URL `http://dlang.org/'."
    (warning line-start (file-name) "(" line "," column "): "
             (or "Warning" "Deprecation") ": " (message) line-end))
   :modes d-mode
-  :next-checkers ((no-errors . d-dscanner-syntax)))
+  :next-checkers ((warnings-only . d-dscanner-syntax)))
 
 (flycheck-define-checker d-dscanner-syntax
   "A D syntax checker using Dscanner.

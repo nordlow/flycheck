@@ -4192,7 +4192,7 @@ Relative paths are relative to the file being checked."
 
 The value of this variable is either a string denoting a language
 standard, or nil, to use the default standard.  When non-nil,
-pass the language standard via the `-gnat' option."
+pass the language standard via the `-std' option."
   :type '(choice (const :tag "Default standard" nil)
                  (string :tag "Language standard"))
   :safe #'stringp
